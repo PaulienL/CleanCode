@@ -15,6 +15,10 @@ public class LoyaltyCard {
         this.bonusPoints = bonusPoints;
     }
 
+    public void setBonusPoints(long bonusPointsToAdd) {
+        this.bonusPoints += bonusPointsToAdd;
+    }
+
     public String getLoyaltyCardBarcode() {
         return loyaltyCardBarcode;
     }
