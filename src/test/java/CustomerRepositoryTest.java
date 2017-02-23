@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +7,12 @@ import java.util.List;
 /**
  * Created by paulienl on 23/02/2017.
  */
-public class StoreTest {
-    Store store = new Store();
+public class CustomerRepositoryTest {
+    CustomerRepository store = new CustomerRepository();
 
     @Test
     public void addCustomerToCollection(){
-        Customer customer = new Customer("1","Piet","Uitdebroek");
+        Customer customer = new Customer("Piet","Uitdebroek");
         store.addCustomer(customer);
         List<Customer> customers = new ArrayList<Customer>();
         customers.add(customer);
@@ -21,8 +20,8 @@ public class StoreTest {
     }
     @Test
     public void findCustomerOnLoyaltyBarcode_ShouldReturnCustomer(){
-        LoyaltyCard loyaltyCard = new LoyaltyCard("1","123",123);
-        Customer customer = new Customer("1","Piet","Uitdebroek", loyaltyCard);
+        LoyaltyCard loyaltyCard = new LoyaltyCard("123",123);
+        Customer customer = new Customer("Piet","Uitdebroek", loyaltyCard);
 
         org.assertj.core.api.Assertions.assertThat(store.findCustomerByLoyaltyCardBarcode("123").equals(customer));
 

@@ -4,10 +4,10 @@ import java.util.List;
 /**
  * Created by paulienl on 23/02/2017.
  */
-public class Store {
+public class CustomerRepository {
     private List<Customer> customers;
 
-    public Store(){
+    public CustomerRepository(){
         customers = new ArrayList<>();
     }
 

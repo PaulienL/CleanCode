@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 /**
  * Created by paulienl on 23/02/2017.
  */
@@ -7,8 +9,8 @@ public class LoyaltyCard {
     private String loyaltyCardBarcode;
     private long bonusPoints;
 
-    public LoyaltyCard(String loyaltyCardID, String loyaltyCardBarcode, long bonusPoints) {
-        this.loyaltyCardID = loyaltyCardID;
+    public LoyaltyCard( String loyaltyCardBarcode, long bonusPoints) {
+        this.loyaltyCardID = UUID.randomUUID().toString();
         this.loyaltyCardBarcode = loyaltyCardBarcode;
         this.bonusPoints = bonusPoints;
     }
