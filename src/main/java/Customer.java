@@ -41,7 +41,7 @@ public class Customer {
     {
         return loyaltyCard;
     }
-    public String getLoyaltyCardBarcode(){
+    public String getCustomerLoyaltyCardBarcode(){
 
         return loyaltyCard.getLoyaltyCardBarcode();
     }
@@ -62,5 +62,17 @@ public class Customer {
         groceryList.add(new Grocery(groceryName));
     }
 
+    public int timesBought(String groceryToFind)
+    {
+        int result = 0;
+        for (Grocery item: groceryList)
+        {
+            if (item.getName().equals(groceryToFind))
+            {
+                ++result;
+            }
+        }
+        return result;
+    }
 
 }
